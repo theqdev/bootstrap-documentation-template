@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Product Documentation</title>
+    <link rel="shortcut icon" href="assets/images/logo-white.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/highlight.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/docs.css" type="text/css">
+
+    <script>
+        productConfig = {
+            name: 'Template App',
+            version: '1.0.0'
+        }
+    </script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-between">
+        <!-- Sidebar -->
+        <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0" id="sidebar">
+            <ul class="nav flex-column flex-nowrap overflow-hidden" id="sticker">
+                <!-- Logo Area-->
+                <div>
+                    <a href="" class="navbar-brand"><img src="assets/images/logo.svg" alt="Logo"><span class="badge badge-green ml-3 versionLabel">1.0.0</span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- Navigation -->
+                <li class="nav-item">
+                    <a class="nav-link text-truncate" href="#introduction"> <span class="d-none d-sm-inline">Introduction</span></a>
+                    <a class="nav-link text-truncate" href="#typography"> <span class="d-none d-sm-inline">Typography</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate submenu" href="#submenu1" data-type="submenu" data-toggle="collapse" > <span class="d-none d-sm-inline">Components</span></a>
+                    <div class="collapse" id="submenu1" aria-expanded="true">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link" href="#snippets" ><span>Code Snippets</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#alerts" ><span>Alerts</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-truncate" href="#contact"> <span class="d-none d-sm-inline">Contact</span></a></li>
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div class="main-content col-lg-10 pt-4 pb-4">
+
+            <div id="introduction" class="mb-4">
+                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Introduction </h2>
+                <h6 class="hidden-sm-down">Clean and simpe documentation for Qdev products and not only. Build on Bootstrap + jQuery.</h6>
+            </div>
+
+            <div id="typography" class="mb-4">
+                <h2><a data-toggle="collapse" class="d-md-none"><i class="fa fa-bars"></i></a> Typography </h2>
+
+                <p>Examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
+                <h3>Heading</h3>
+                <h4>Heading</h4>
+                <h5>Heading</h5>
+                <h6>Heading</h6>
+
+
+                <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                <p><u>This line of text will render as underlined</u></p>
+                <p><small>This line of text is meant to be treated as fine print.</small></p>
+                <p><strong>This line rendered as bold text.</strong></p>
+                <p><em>This line rendered as italicized text.</em></p>
+
+
+                <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+                <h5>Lists</h4>
+
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                        <li>Aliquam tincidunt mauris eu risus.</li>
+                    </ol>
+
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                        <li>Aliquam tincidunt mauris eu risus.</li>
+                    </ul>
+
+            </div>
+
+            <div id="snippets" class="mb-4">
+
+                <h2 ><a data-toggle="collapse" class="d-md-none"><i class="fa fa-bars"></i></a> Code snippets </h4>
+                    <p>One line: <code>ls -lah</code></p></h2>
+
+                <p>Multiple line, highlighted snippets</p>
+
+
+                <pre><code class="css">
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+                    </code></pre>
+                <pre><code class="java">
+/**
+ * @author John Smith <john.smith@example.com>
+*/
+package l2f.gameserver.model;
+
+public abstract strictfp class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log("Should not be called");
+    if (1 > 5) { // wtf!?
+      return;
+    }
+  }
+}
+                                        </code></pre>
+
+            </div>
+
+            <div id="alerts" class="mb-4">
+                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Alerts </h2>
+                <h6 class="hidden-sm-down">To draw more attention.</h6>
+                <div class="alert alert-warning" role="alert">
+                    <h4>Tip</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos minus, qui error eveniet! Et consequuntur fugit nulla nam</p>
+                    <i class="icon-alert-circle"></i>
+                </div>
+            </div>
+
+
+            <div id="contact" class="mb-4">
+                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Contact us </h2>
+                <p>For questions, do not hesitate to conctact us by sending us an email at contact@qwebdev.net or visit our site at <a href="https://qdev.tech">Qdev Techs</a> .</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark">
+    <div class="container">
+        <div class="row gutter-3">
+            <div class="col-12 col-md-2">
+                <a href=""><img src="assets/images/logo-white.svg" alt="Logo"></a>
+            </div>
+            <div class="col-12 col-md-6 text-white">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-group list-group-minimal">
+                            <li class="list-group-item"><a href="" class="link">Product Page</a></li>
+                            <li class="list-group-item"><a href="" class="link">Company Page</a></li>
+                            <li class="list-group-item"><a href="" class="link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-group list-group-minimal">
+                            <li class="list-group-item"><a href="" class="link">Partner</a></li>
+                            <li class="list-group-item"><a href="" class="link">Another partner</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right ">
+                <span class="badge badge-green ml-3 versionLabel">1.0.0</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-1.9.1.min.js"
+        integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+        crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/highlight.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.sticky.js" type="text/javascript"></script>
+<script src="assets/js/docs.js" type="text/javascript"></script>
+</html>
