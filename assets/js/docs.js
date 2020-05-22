@@ -1,13 +1,15 @@
 $( document ).ready(function() {
 
+  // Binding code highlighter
   hljs.initHighlightingOnLoad();
-
-  $(document).ready(function(){
-    $("#sticker").sticky({topSpacing:0});
+  // Sticky bar
+  bindDesktopStickyBar();
+  $( window ).resize(function() {
+    bindDesktopStickyBar();
   });
 
+  // Initializing product info
   $('.versionLabel').html(productConfig.version)
-
   document.title = productConfig.name + ' Documentation'
 
 // Smooth Scrolling
@@ -27,6 +29,7 @@ $('a[href*="#"]')
       // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // window.location.hash = this.hash.slice(1);
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
@@ -49,3 +52,13 @@ $('a[href*="#"]')
     }
   });
 });
+
+function bindDesktopStickyBar() {
+  let isMobile = window.matchMedia("only screen and (max-width: 993px)").matches;
+  if (!isMobile) {
+    $("#sticker").sticky({topSpacing:0});
+  }
+  else{
+    $("#sticker").unstick();
+  }
+}

@@ -2,9 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1">-->
     <title>Product Documentation</title>
     <link rel="shortcut icon" href="assets/images/logo-white.svg" type="image/x-icon">
+
+    <meta name="author" content="Qdev Techs">
+    <meta name="description" content="Bootstrap based documentation template">
+    <meta name="keywords" content="bootstrap,documentation,template">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
@@ -23,22 +27,21 @@
 <div class="container">
     <div class="row justify-content-between">
         <!-- Sidebar -->
-        <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0" id="sidebar">
-            <ul class="nav flex-column flex-nowrap overflow-hidden" id="sticker">
+        <div class="col-xl-2 col-lg-2 col-sm-12 col-md-12 col-12 show d-md-flex bg-light pt-2" id="sidebar">
+            <ul class="nav flex-column flex-nowrap overflow-hidden container" id="sticker">
                 <!-- Logo Area-->
-                <div>
-                    <a href="" class="navbar-brand"><img src="assets/images/logo.svg" alt="Logo"><span class="badge badge-green ml-3 versionLabel">1.0.0</span></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+                <a class="navbar-brand pb-4"><img src="assets/images/logo.svg" alt="Logo"><span class="badge badge-green ml-3 versionLabel">1.0.0</span></a>
                 <!-- Navigation -->
                 <li class="nav-item">
-                    <a class="nav-link text-truncate" href="#introduction"> <span class="d-none d-sm-inline">Introduction</span></a>
-                    <a class="nav-link text-truncate" href="#typography"> <span class="d-none d-sm-inline">Typography</span></a>
+                <a class="nav-link " href="#introduction"> <span class=" d-sm-inline">Introduction</span></a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link collapsed text-truncate submenu" href="#submenu1" data-type="submenu" data-toggle="collapse" > <span class="d-none d-sm-inline">Components</span></a>
+                    <a class="nav-link " href="#typography"> <span class=" d-sm-inline">Typography</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed  submenu" href="#submenu1" data-type="submenu" data-toggle="collapse" > <span class=" d-sm-inline">Components</span></a>
                     <div class="collapse" id="submenu1" aria-expanded="true">
                         <ul class="flex-column pl-2 nav">
                             <li class="nav-item"><a class="nav-link" href="#snippets" ><span>Code Snippets</span></a></li>
@@ -46,21 +49,29 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link text-truncate" href="#contact"> <span class="d-none d-sm-inline">Contact</span></a></li>
+                
+                <li class="nav-item"><a class="nav-link " href="#contact"> <span class=" d-sm-inline">Contact</span></a></li>
+
             </ul>
         </div>
 
 
         <!-- Page Content -->
-        <div class="main-content col-lg-10 pt-4 pb-4">
+        <div class="main-content col-xl-10 coll-md-10 col-lg-10 col-sm-12 col-12 pt-4 pb-4">
 
             <div id="introduction" class="mb-4">
-                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Introduction </h2>
-                <h6 class="hidden-sm-down">Clean and simpe documentation for Qdev products and not only. Build on Bootstrap + jQuery.</h6>
+                <h2 class="pb-2">Introduction </h2>
+                <p>Clean and simpe documentation for Qdev products but not only. Built on Bootstrap + jQuery, it's easy to edit and comes with neat features out of the box, like smooth scrolling between sections, sticky menu, mobile responsiveness and more.</p>
+                <p>Start working on your documentation by opening the HTML file and edit these values:</p>
+                <pre><code class="javascript">productConfig = {
+    name: 'Template App',
+    version: '1.0.0'
+}</code></pre>
+
             </div>
 
             <div id="typography" class="mb-4">
-                <h2><a data-toggle="collapse" class="d-md-none"><i class="fa fa-bars"></i></a> Typography </h2>
+                <h2 class="pb-2"> Typography </h2>
 
                 <p>Examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
                 <h3>Heading</h3>
@@ -97,14 +108,14 @@
 
             <div id="snippets" class="mb-4">
 
-                <h2 ><a data-toggle="collapse" class="d-md-none"><i class="fa fa-bars"></i></a> Code snippets </h4>
+                <h2  class="pb-2"> Code snippets </h4>
                     <p>One line: <code>ls -lah</code></p></h2>
 
-                <p>Multiple line, highlighted snippets</p>
+                <p>Multiple line, highlighted code snippets and blocks.</p>
 
 
-                <pre><code class="css">
-body::before {
+<pre><code class="css">/* CSS Code */
+  body::before {
   content: "";
   position: fixed;
   top: -10px;
@@ -114,8 +125,9 @@ body::before {
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
-                    </code></pre>
-                <pre><code class="java">
+</code></pre>
+
+<pre><code class="java">/* Java Code */
 /**
  * @author John Smith <john.smith@example.com>
 */
@@ -132,13 +144,13 @@ public abstract strictfp class L2Char extends L2Object {
     }
   }
 }
-                                        </code></pre>
+</code></pre>
 
             </div>
 
             <div id="alerts" class="mb-4">
-                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Alerts </h2>
-                <h6 class="hidden-sm-down">To draw more attention.</h6>
+                <h2 class="pb-2">Alerts </h2>
+                <p>To draw more attention.</h6>
                 <div class="alert alert-warning" role="alert">
                     <h4>Tip</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos minus, qui error eveniet! Et consequuntur fugit nulla nam</p>
@@ -148,7 +160,7 @@ public abstract strictfp class L2Char extends L2Object {
 
 
             <div id="contact" class="mb-4">
-                <h2><a class="d-md-none"><i class="fa fa-bars"></i></a> Contact us </h2>
+                <h2 class="pb-2">Contact us </h2>
                 <p>For questions, do not hesitate to conctact us by sending us an email at contact@qwebdev.net or visit our site at <a href="https://qdev.tech">Qdev Techs</a> .</p>
             </div>
 
@@ -166,19 +178,20 @@ public abstract strictfp class L2Char extends L2Object {
                 <a href=""><img src="assets/images/logo-white.svg" alt="Logo"></a>
             </div>
             <div class="col-12 col-md-6 text-white">
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="mb-4">Bootstrap documentation template with smooth scrolling between sections, sticky menu, mobile responsiveness and more. </p>
                 <div class="row">
                     <div class="col">
                         <ul class="list-group list-group-minimal">
-                            <li class="list-group-item"><a href="" class="link">Product Page</a></li>
-                            <li class="list-group-item"><a href="" class="link">Company Page</a></li>
-                            <li class="list-group-item"><a href="" class="link">Contact</a></li>
+                            <li class="list-group-item"><a href="#" class="link">About</a></li>
+                            <li class="list-group-item"><a href="#" class="link">Documentation</a></li>
+                            <li class="list-group-item"><a href="#" class="link">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col">
                         <ul class="list-group list-group-minimal">
-                            <li class="list-group-item"><a href="" class="link">Partner</a></li>
-                            <li class="list-group-item"><a href="" class="link">Another partner</a></li>
+                            <li class="list-group-item"><a href="https://alkanyx.com/" target="_blank" class="link">Alkanyx</a></li>
+                            <li class="list-group-item"><a href="https://taskcamp.net/" target="_blank" class="link">Taskcamp</a></li>
+                            <li class="list-group-item"><a href="https://qdev.tech" target="_blank" class="link">Qdev Techs</a></li>
                         </ul>
                     </div>
                 </div>
