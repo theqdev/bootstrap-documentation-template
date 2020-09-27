@@ -13,4 +13,4 @@ productConfig = {
 ```
 
 ---
-Qdev © 2020 - [Qdev Techs](https://docs.qdev.tech/) - [Alkanyx Marketplace](https://alkanyx.com) 
+Qdev © 2020 - [Qdev Techs](https://docs.qdev.tech/) - [Alkanyx Marketplace](https://alkanyx.com) - [Taskcamp](https://taskcamp.net) - [Illustation.io](https://illustation.io) 
