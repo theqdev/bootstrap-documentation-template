@@ -51,6 +51,11 @@ $('a[href*="#"]')
       }
     }
   });
+  
+  $('.nav-link').on('click',function () {
+    window.location.hash = $(this).attr('href');
+  });
+  
 });
 
 function bindDesktopStickyBar() {
